@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary: #0af;
+            --secondary: #af6;
+            --third: #a9f;
+            --fourth: #20f;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5,minmax(50px,1fr)); 
+            grid-template-rows: repeat(50,80px);
+            grid-auto-flow:dense;
+            grid-gap:3px;
+        }
+        .box{
+            background-color: #aaa;
+        }
+        .box:nth-of-type(2n){
+            background-color: var(--primary);
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .box:nth-of-type(3n){
+            background-color: var(--secondary);
+            grid-row: span 2;
+            grid-column: span 3;
+        }
+        .box:nth-of-type(5n){
+            background-color: var(--third);
+            grid-row: span 3;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+    </div>
+</body>
+</html>
